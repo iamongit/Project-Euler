@@ -20,3 +20,5 @@ p5();
 var end = new Date().getTime();
 var time = end - start;
 console.log('Execution time: ' + time/1000 +" seconds");
+
+console.log("testing");
