@@ -10,7 +10,7 @@ if (num === 2){
 	return true;
 }
 
-for(var i=2; i<=(num/2);i++){
+for(var i=2; i<=Math.sqrt(num);i++){
 	if(num%i === 0){
 		return false;
 	}
@@ -21,21 +21,21 @@ return true;
 
 
 //sum of primes below num
-var sumprime=function(num1,num2){
+var sumprime=function(num){
 	sum=0;
-	for(var i=num1;i<num2;i++){
+	for(var i=0;i<num;i++){
 		if(isp(i)===true){
-			sum=sum+i;
+			sum+=i;
 		}
 	}
 	return(sum);
 }
 var start = new Date().getTime();
-var a=sumprime(0,2000000); //9914236195
+var a=sumprime(2000000); //142913828922
 console.log(a);
 var end = new Date().getTime();
 var time = end - start;
 console.log('Execution time: ' + time/1000 +" seconds");
-//Execution time: 268.766 seconds// 4.5 minutes
+//Execution time: 0.723 seconds
 
 
